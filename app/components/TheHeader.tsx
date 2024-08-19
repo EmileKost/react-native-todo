@@ -1,9 +1,13 @@
 import { View, Text } from "react-native";
 import { StyleSheet } from "react-native";
 
+import dayjs from "dayjs";
+
 export const TheHeader = () => {
+	const currentDate = dayjs().format("DD/MM/YYYY");
 	return (
 		<View style={styles.container}>
+			<Text>{currentDate}</Text>
 			<Text style={styles.title}>Daily tasks</Text>
 		</View>
 	);
@@ -15,7 +19,8 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 12,
 	},
 	title: {
-		fontSize: 24,
+		fontSize: 28,
 		fontWeight: 500,
+		marginTop: 6,
 	},
 });
