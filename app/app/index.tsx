@@ -1,15 +1,18 @@
 import { Text, View } from "react-native";
+import { StyleSheet } from "react-native";
+
+import { TheHeader } from "@/components/TheHeader";
 
 export default function Index() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
-  );
+	return (
+		<View style={styles.parentContainer}>
+			<TheHeader />
+		</View>
+	);
 }
+
+const styles = StyleSheet.create({
+	parentContainer: {
+		paddingTop: 80,
+	},
+});
