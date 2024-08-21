@@ -1,10 +1,7 @@
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import { StyleSheet } from "react-native";
 
-import dayjs from "dayjs";
-
 export const TheHeader = () => {
-	const currentDate = dayjs().format("DD/MM/YYYY");
 	const name = "Emile";
 	return (
 		<View style={styles.container}>
@@ -13,6 +10,13 @@ export const TheHeader = () => {
 					Hey, ready for today
 					{name && <Text>{` ${name}`}</Text>}?
 				</Text>
+				<View style={styles.profileImageContainer}>
+					<Image
+						source={require("../assets/images/me.jpg")}
+						alt="Profile picture"
+						style={styles.profileImage}
+					/>
+				</View>
 			</View>
 		</View>
 	);
@@ -30,6 +34,9 @@ const styles = StyleSheet.create({
 	},
 	textContainer: {
 		maxWidth: "85%",
+		display: "flex",
+		flexDirection: "column",
+		gap: 6,
 	},
 	title: {
 		fontSize: 32,
@@ -41,5 +48,15 @@ const styles = StyleSheet.create({
 	subtitle: {
 		fontSize: 14,
 		color: "#FFFFFF",
+	},
+	profileImageContainer: {
+		borderRadius: 50,
+		width: 80,
+		height: 80,
+		overflow: "hidden",
+	},
+	profileImage: {
+		width: 80,
+		height: 80,
 	},
 });
