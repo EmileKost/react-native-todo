@@ -6,10 +6,6 @@ export const TheHeader = () => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.textContainer}>
-				<Text style={styles.title}>
-					Hey, ready for today
-					{name && <Text>{` ${name}`}</Text>}?
-				</Text>
 				<View style={styles.profileImageContainer}>
 					<Image
 						source={require("../assets/images/me.jpg")}
@@ -17,6 +13,10 @@ export const TheHeader = () => {
 						style={styles.profileImage}
 					/>
 				</View>
+				<Text style={styles.title}>
+					Hey, ready for today
+					{name && <Text>{` ${name}`}</Text>}?
+				</Text>
 			</View>
 		</View>
 	);
