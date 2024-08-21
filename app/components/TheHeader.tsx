@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
 	container: {
 		paddingTop: 80,
 		paddingBottom: 30,
-		paddingHorizontal: 12,
+		paddingHorizontal: 13,
 		backgroundColor: "#0D60DD",
 		display: "flex",
 		flexDirection: "column",
