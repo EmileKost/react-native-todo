@@ -1,7 +1,10 @@
 import { Text, View } from "react-native";
 import { StyleSheet } from "react-native";
+import { Dimensions } from "react-native";
 
 import { TheHeader } from "@/components/TheHeader";
+
+const appHeight = Dimensions.get("screen").height;
 
 export default function Index() {
 	return (
@@ -13,6 +16,7 @@ export default function Index() {
 
 const styles = StyleSheet.create({
 	parentContainer: {
-		paddingTop: 80,
+		backgroundColor: "#000814",
+		height: appHeight,
 	},
 });
